@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let arr = [5,1,4,5,9,7,4,5,1]
+  function sum(arr) {
+      let sum = 0;
+      for (let i = 0; i < arr.length; i++) {
+          if (arr[i] % 2 === 1) {
+              sum += arr[i];
+          }
+      }
+      return sum;
+  }
+  let result = sum(arr);
+  alert(result);
+</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Enter a number </p>
+<input id = "a" type = "text"> <button onclick="multiplication()">Show</button>
+<p id="result"> Kết quả </p>
+</body>
+<script>
+    function isPrime(number) {
+        let check = true;
+        if (number < 2) {
+            check = false
+        }
+        else {
+            for (let i = 2; i <= Math.sqrt(number); i++) {
+                if (number % i === 0) {
+                    check = false;
+                    break;
+                }
+            }
+        }
+        return check;
+    }
+    function multiplication() {
+        let arr = new Array();
+        let a = document.getElementById("a").value
+        for (let i = 0; i < a; i++) {
+            let checkPrime = isPrime(i);
+            if (checkPrime === true) {
+                arr.push(i);
+            }
+        }
+        document.getElementById("result").innerHTML = "Kết quả " + arr;
+    }
+</script>
+</html>
